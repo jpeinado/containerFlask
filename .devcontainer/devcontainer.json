@@ -27,5 +27,12 @@
       ]
     }
   },
-  "forwardPorts": [5000]
+"forwardPorts": [
+	5000
+],
+"features": {
+	"ghcr.io/devcontainers/features/azure-cli:1": {
+		"version": "latest"
+	}
+}
 }

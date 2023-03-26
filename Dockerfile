@@ -1,11 +1,11 @@
 FROM python:3.10.4
 
-WORKDIR /app/envFlask
+WORKDIR /webApp
 
-COPY ./requirements,txt /app/envFlask/
+COPY ./requirements.txt /webApp/requirements.txt
 
-RUN pip install -r /app/envFlask/requirements.txt
+RUN pip install -r /webApp/requirements.txt
 
-COPY ./envFlask /app/envFlask
+COPY . /webApp
 
-CMD [ "app.py", "runserver", "--host", "0.0.0.0", "--port", "5000" ]
+CMD [ "python3", "flask" , "run", "--host", "0.0.0.0", "--port", "5000" ]
