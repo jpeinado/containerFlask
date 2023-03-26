@@ -8,4 +8,4 @@ RUN pip install -r /webApp/requirements.txt
 
 COPY . /webApp
 
-CMD [ "python3", "flask" , "run", "--host", "0.0.0.0", "--port", "5000" ]
+CMD [ "python3", "-m", "flask" , "run", "--host", "0.0.0.0", "--port", "5000" ]
